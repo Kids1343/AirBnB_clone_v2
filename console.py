@@ -148,12 +148,6 @@ class HBNBCommand(cmd.Cmd):
         print(obj.id)
         obj.save()
 
-        except SyntaxError:
-            print("** class name missing **")
-        except NameError:
-            print("** class doesn't exist **")
-
-
         new_instance = HBNBCommand.classes[arg]()
         storage.save()
         print(new_instance.id)
